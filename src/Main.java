@@ -21,21 +21,28 @@ public class Main {
         System.out.println(price);
 
         //3
-        int grade = 81;
+        int grade = 121;
+        String result = "";
 
-        if (grade < 25) {
-            System.out.println("Оценка: F");
+        if (grade < 0) {
+            result = "Неверное значение";
+        } else if (grade >= 0 && grade < 25) {
+            result = "Оценка: F";
         } else if (grade >= 25 && grade < 45) {
-            System.out.println("Оценка: E");
+            result = "Оценка: E";
         } else if (grade >= 45 && grade < 50) {
-            System.out.println("Оценка: D");
+            result = "Оценка: D";
         } else if (grade >= 50 && grade < 60) {
-            System.out.println("Оценка: C");
+            result = "Оценка: C";
         } else if (grade >= 60 && grade < 80) {
-            System.out.println("Оценка: B");
-        } else if (grade >= 80) {
-            System.out.println("Оценка: A");
+            result = "Оценка: B";
+        } else if (grade >= 80 && grade <= 120) {
+            result = "Оценка: A";
+        } else if (grade > 120) {
+            result = "Неверное значние";
         }
+
+        System.out.println(result);
 
         //4
         int number = 12345;
@@ -100,31 +107,33 @@ public class Main {
 
         //5.4
         int day = 5;
+        String weekDay = "";
 
         switch (day) {
             case 1 -> {
-                System.out.println("Понедельник");
+                weekDay = "Понедельник";
             }
             case 2 -> {
-                System.out.println("Вторник");
+                weekDay = "Вторник";
             }
             case 3 -> {
-                System.out.println("Среда");
+                weekDay = "Среда";
             }
             case 4 -> {
-                System.out.println("Четверг");
+                weekDay = "Четверг";
             }
             case 5 -> {
-                System.out.println("Пятница");
+                weekDay = "Пятница";
             }
             case 6 -> {
-                System.out.println("Суббота");
+                weekDay = "Суббота";
             }
             case 7 -> {
-                System.out.println("Воскресенье");
+                weekDay = "Воскресенье";
             }
         }
 
+        System.out.println(weekDay);
         //5.5
         int x = 4;
         int y = 5;
